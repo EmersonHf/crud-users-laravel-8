@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +29,6 @@ Route::get('/login',[LoginController::class,'login'])->middleware('alreadyLogged
 Route::post('/register-user',[RegisterUserController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[LoginController::class,'loginUser'])->name('login-user');
 Route::get('/dashboard',[UserController::class,'dashboard'])->middleware('isLoggedIn');
-Route::resource('user', UserController::class);
+Route::resource('users', UserController::class);
 Route::get('/logout',[LoginController::class,'logout']);
-
-
 

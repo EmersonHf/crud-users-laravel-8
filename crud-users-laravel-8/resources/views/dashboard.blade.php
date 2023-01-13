@@ -26,6 +26,8 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <a href="users">Lista de Usuarios</a>
 
 </body>
 
