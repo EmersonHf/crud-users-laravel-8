@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -20,4 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('/register',[RegistrationController::class,'register']);
-
+Route::get('/login',[LoginController::class,'login']);
