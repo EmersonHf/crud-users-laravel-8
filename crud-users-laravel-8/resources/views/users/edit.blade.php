@@ -68,6 +68,13 @@
                 </div>
             </div>
             <div>
+                <div class="form-group">
+                    <strong>Senha:</strong>
+                    <input type="password" name="password" value="{{ $user->password }}" class="form-control"
+                        placeholder="password">
+                </div>
+            </div>
+            <div>
                 <button type="submit">Salvar</button>
             </div>
         </div>
