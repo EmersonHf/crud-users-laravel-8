@@ -24,10 +24,10 @@ Route::get('/', function () {
 });
 
 Route::get('/register',[RegistrationController::class,'register']);
-Route::get('/login',[LoginController::class,'login']);
+Route::get('/login',[LoginController::class,'login'])->middleware('alreadyLoggedIn');
 Route::post('/register-user',[RegisterUserController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[LoginController::class,'loginUser'])->name('login-user');
-Route::get('/dashboard',[UserController::class,'dashboard']);
+Route::get('/dashboard',[UserController::class,'dashboard'])->middleware('isLoggedIn');
 Route::resource('user', UserController::class);
 Route::get('/logout',[LoginController::class,'logout']);
 
