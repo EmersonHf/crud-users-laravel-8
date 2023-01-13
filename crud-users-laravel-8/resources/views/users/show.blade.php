@@ -7,7 +7,7 @@
                 <h2> Mostra Usuario</h2>
             </div>
             <div>
-                <a href="{{ route('users.index') }}"> Back</a>
+                <a href="{{ route('users.index') }}"> Voltar</a>
             </div>
         </div>
     </div>
