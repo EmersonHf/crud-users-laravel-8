@@ -14,7 +14,7 @@ class RegisterUserController extends Controller
         'email' => 'required|email|unique:App\Models\User',
         'password'=>'required|min:6|max:20',
         'cpf' => 'required|numeric|digits:11|unique:App\Models\User',
-        'cep' =>'required|numeric|digits:8|unique:App\Models\User',
+        'cep' =>'required|numeric|digits:8',
         'estado'=>'string',
         'cidade'=>'string'
        ]);
