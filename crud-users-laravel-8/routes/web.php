@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -26,3 +27,7 @@ Route::get('/register',[RegistrationController::class,'register']);
 Route::get('/login',[LoginController::class,'login']);
 Route::post('/register-user',[RegisterUserController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[LoginController::class,'loginUser'])->name('login-user');
+Route::get('/dashboard',[UserController::class,'dashboard']);
+Route::resource('user', UserController::class);
+
+
