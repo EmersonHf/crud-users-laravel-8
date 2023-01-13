@@ -12,17 +12,33 @@
 
     <h1>Login User</h1>
     <br>
-    <form action="" method="POST">
+    <form action="{{ route('login-user') }}" method="post">
+        @if (Session::has('sucesso'))
+            <div>{{ Session::get('sucesso') }}</div>
+        @endif
+        @if (Session::has('falha'))
+            <div>{{ Session::get('falha') }}</div>
+        @endif
         @csrf
 
         <br><br>
         <div class="form-group">
             <label for="email">email</label>
-            <input type="email" placeholder="Digite seu email" name="email">
+            <input type="email" value="{{ old('email') }}" placeholder="Digite seu email" name="email">
+            <span>
+                @error('email')
+                    {{ $message }}
+                @enderror
+            </span>
         </div>
         <div class="form-group">
             <label for="password">Senha</label>
             <input type="password" placeholder="Digite sua senha" name="password">
+            <span>
+                @error('password')
+                    {{ $message }}
+                @enderror
+            </span>
         </div>
         <input type="submit" value="Login">
         <br>
