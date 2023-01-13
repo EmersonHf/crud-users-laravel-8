@@ -12,6 +12,12 @@
         @yield('content')
     </div>
 
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('js/cep.js') }}"></script>
+    <script src="{{ asset('js/cpf-formatting.js') }}"></script>
+    @stack('scripts')
+
 
 </body>
 
