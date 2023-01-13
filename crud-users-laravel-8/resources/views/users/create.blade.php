@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('users.layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register page</title>
-</head>
+@section('content')
+    <div>
+        <div>
+            <div>
+                <h2>Adicionar novo usuario</h2>
+            </div>
+            <div>
+                <a href="{{ route('users.index') }}"> Back</a>
+            </div>
+        </div>
+    </div>
 
-<body>
-
-    <h1>Register User</h1>
-    <br>
     @if ($errors->any())
         <div>
-            There were some problems with your input.<br><br>
+            Há alguns erros com o input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -22,19 +22,20 @@
             </ul>
         </div>
     @endif
-    <br>
-    <form action="{{ route('register-user') }}" method="post">
+
+    <form action="{{ route('users.store') }}" method="POST">
+        @csrf
         @if (Session::has('sucesso'))
             <div>{{ Session::get('sucesso') }}</div>
         @endif
         @if (Session::has('falha'))
             <div>{{ Session::get('falha') }}</div>
         @endif
-        @csrf
+
         <div class="form-group">
             <label for="name">Nome Completo</label>
-            <input type="text" class="form-control" value="{{ old('name') }}"
-                placeholder="Digite seu Nome Completo" name="name">
+            <input type="text" class="form-control" value="{{ old('name') }}" placeholder="Digite seu Nome Completo"
+                name="name">
 
         </div>
         <br><br>
@@ -74,10 +75,8 @@
                 <input type="password" placeholder="Digite sua senha" name="password">
 
             </div>
-            <input type="submit" value="Salvar">
+            <input type="submit" value="Criar Usuario">
             <br>
-            <a href="login">Ja está registrado? Clique para Logar </a>
-    </form>
-</body>
 
-</html>
+    </form>
+@endsection
