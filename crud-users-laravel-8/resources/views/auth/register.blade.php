@@ -45,13 +45,15 @@
             <br><br>
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" value="{{ old('cpf') }}" placeholder="Digite seu CPF" name="cpf">
+                <input type="text" class="cpf" value="{{ old('cpf') }}" placeholder="Digite seu CPF"
+                    name="cpf">
 
             </div>
             <br><br>
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" value="{{ old('cep') }}" placeholder="Digite seu CEP" name="cep">
+                <input type="text" class="cep" value="{{ old('cep') }}" placeholder="Digite seu CEP"
+                    name="cep">
 
             </div>
 
@@ -65,7 +67,8 @@
             <br><br>
             <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="text" value="{{ old('estado') }}" placeholder="Digite seu Estado" name="estado">
+                <input type="text" class="uf" value="{{ old('estado') }}" placeholder="Digite seu Estado"
+                    name="estado">
 
             </div>
             <br><br>
@@ -78,6 +81,16 @@
             <br>
             <a href="login">Ja está registrado? Clique para Logar </a>
     </form>
+
+
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-mask/jquery.mask.min.js') }}"></script>
+
+    <script>
+        $('.cpf').mask('000.000-00');
+        $('.cep').mask('00000-000');
+        $('.uf').mask('SS');
+    </script>
 </body>
 
 </html>

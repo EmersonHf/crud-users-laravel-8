@@ -7,7 +7,7 @@
                 <h2>Adicionar novo usuario</h2>
             </div>
             <div>
-                <a href="{{ route('users.index') }}"> Back</a>
+                <a href="{{ route('users.index') }}"> Voltar</a>
             </div>
         </div>
     </div>
