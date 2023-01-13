@@ -132,7 +132,7 @@ public function dashboard(){
         $user->update($request->all());
         if($res){
             return redirect()->route('users.index')
-                        ->with('success','Usuario atualizado com sucesso');
+                        ->with('sucesso','Usuario atualizado com sucesso');
            }else {
             return back()->with('falha','algo deu errado');
            }
@@ -145,8 +145,11 @@ public function dashboard(){
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('user.index')
+                        ->with('sucesso','Usuario deletado com sucesso');
     }
 }
