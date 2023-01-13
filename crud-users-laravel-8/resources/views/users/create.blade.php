@@ -47,15 +47,15 @@
             <br>
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" value="{{ old('cpf') }}" class="form-control" placeholder="Digite seu CPF"
-                    name="cpf">
+                <input type="text" value="{{ old('cpf') }}" class="form-control cpf" id="cpf"
+                    placeholder="Digite seu CPF" name="cpf">
 
             </div>
             <br>
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" value="{{ old('cep') }}" class="form-control" placeholder="Digite seu CEP"
-                    name="cep">
+                <input type="text" id="cep" value="{{ old('cep') }}" class="form-control cep"
+                    placeholder="Digite seu CEP" name="cep">
 
             </div>
 
@@ -63,15 +63,15 @@
 
             <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="text" value="{{ old('cidade') }}" class="form-control" placeholder="Digite sua Cidade"
-                    name="cidade">
+                <input type="text" id="cidade" value="{{ old('cidade') }}" class="form-control"
+                    placeholder="Digite sua Cidade" name="cidade">
 
             </div>
             <br>
             <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="text" value="{{ old('estado') }}" class="form-control" placeholder="Digite seu Estado"
-                    name="estado">
+                <input type="text" id="uf" value="{{ old('estado') }}" class="form-control"
+                    placeholder="Digite seu Estado" name="estado">
 
             </div>
             <br>
@@ -83,5 +83,11 @@
             <input type="submit" value="Criar Usuario">
             <br>
 
+
     </form>
+
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('js/cep.js') }}"></script>
+    <script src="{{ asset('js/cpf-formatting.js') }}"></script>
 @endsection

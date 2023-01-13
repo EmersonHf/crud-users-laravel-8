@@ -52,8 +52,8 @@
             <br><br>
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" class="cep" value="{{ old('cep') }}" placeholder="Digite seu CEP"
-                    name="cep">
+                <input type="text" id="cep" class="cep" value="{{ old('cep') }}"
+                    placeholder="Digite seu CEP" name="cep">
 
             </div>
 
@@ -61,14 +61,15 @@
 
             <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="text" value="{{ old('cidade') }}" placeholder="Digite sua Cidade" name="cidade">
+                <input type="text" id="cidade" value="{{ old('cidade') }}" placeholder="Digite sua Cidade"
+                    name="cidade">
 
             </div>
             <br><br>
             <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="text" class="uf" value="{{ old('estado') }}" placeholder="Digite seu Estado"
-                    name="estado">
+                <input type="text" id="uf" class="uf" value="{{ old('estado') }}"
+                    placeholder="Digite seu Estado" name="estado">
 
             </div>
             <br><br>
@@ -85,12 +86,9 @@
 
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('js/cep.js') }}"></script>
+    <script src="{{ asset('js/cpf-formatting.js') }}"></script>
 
-    <script>
-        $('.cpf').mask('000.000-00');
-        $('.cep').mask('00000-000');
-        $('.uf').mask('SS');
-    </script>
 </body>
 
 </html>
