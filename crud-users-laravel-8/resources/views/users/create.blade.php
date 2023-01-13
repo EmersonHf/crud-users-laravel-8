@@ -38,41 +38,46 @@
                 name="name">
 
         </div>
-        <br><br>
+        <br>
         <div class="form-group">
             <label for="email">email</label>
-            <input type="email" value="{{ old('email') }}" placeholder="Digite seu email" name="email">
+            <input type="email" value="{{ old('email') }}" class="form-control" placeholder="Digite seu email"
+                name="email">
 
-            <br><br>
+            <br>
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" value="{{ old('cpf') }}" placeholder="Digite seu CPF" name="cpf">
+                <input type="text" value="{{ old('cpf') }}" class="form-control" placeholder="Digite seu CPF"
+                    name="cpf">
 
             </div>
-            <br><br>
+            <br>
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" value="{{ old('cep') }}" placeholder="Digite seu CEP" name="cep">
+                <input type="text" value="{{ old('cep') }}" class="form-control" placeholder="Digite seu CEP"
+                    name="cep">
 
             </div>
 
-            <br><br>
+            <br>
 
             <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="text" value="{{ old('cidade') }}" placeholder="Digite sua Cidade" name="cidade">
+                <input type="text" value="{{ old('cidade') }}" class="form-control" placeholder="Digite sua Cidade"
+                    name="cidade">
 
             </div>
-            <br><br>
+            <br>
             <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="text" value="{{ old('estado') }}" placeholder="Digite seu Estado" name="estado">
+                <input type="text" value="{{ old('estado') }}" class="form-control" placeholder="Digite seu Estado"
+                    name="estado">
 
             </div>
-            <br><br>
+            <br>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" placeholder="Digite sua senha" name="password">
+                <input type="password" class="form-control" placeholder="Digite sua senha" name="password">
 
             </div>
             <input type="submit" value="Criar Usuario">
