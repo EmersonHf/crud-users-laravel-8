@@ -15,8 +15,9 @@ class User extends Model
         'password',
         'cpf',
         'cep',
-        'cidade',
         'estado',
-        'rua'
+        'cidade'
+
+
     ];
 }

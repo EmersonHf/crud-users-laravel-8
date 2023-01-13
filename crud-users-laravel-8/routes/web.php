@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterUserController;
 
 
 /*
@@ -22,3 +23,4 @@ Route::get('/', function () {
 
 Route::get('/register',[RegistrationController::class,'register']);
 Route::get('/login',[LoginController::class,'login']);
+Route::post('/register-user',[RegisterUserController::class,'registerUser'])->name('register-user');
