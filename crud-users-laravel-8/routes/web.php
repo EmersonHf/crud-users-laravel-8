@@ -32,3 +32,4 @@ Route::resource('user', UserController::class);
 Route::get('/logout',[LoginController::class,'logout']);
 
 
+
