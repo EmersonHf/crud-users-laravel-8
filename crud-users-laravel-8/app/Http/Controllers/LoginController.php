@@ -32,4 +32,10 @@ class LoginController extends Controller
             return back()->with('falha','this email is not registered');
            }
     }
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('login');
+        }
+    }
 }

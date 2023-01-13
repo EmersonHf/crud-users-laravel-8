@@ -29,5 +29,6 @@ Route::post('/register-user',[RegisterUserController::class,'registerUser'])->na
 Route::post('/login-user',[LoginController::class,'loginUser'])->name('login-user');
 Route::get('/dashboard',[UserController::class,'dashboard']);
 Route::resource('user', UserController::class);
+Route::get('/logout',[LoginController::class,'logout']);
 
 
